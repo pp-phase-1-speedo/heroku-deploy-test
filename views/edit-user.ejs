@@ -1,0 +1,41 @@
+<%- include('./partials/head', {title: 'Add Destination' }) %>
+
+    <form action="/users/edit/<%= data.id %>" method="POST">
+        <label for="username">Username</label><br>
+        <input type="text" id="username" name="username" placeholder="<%= data.username %>"><br>
+  
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password"><br>
+  
+        <label for="first_name">First Name</label><br>
+        <input type="text" id="first_name" name="first_name" placeholder="<%= data.first_name %>"><br>
+  
+        <label for="last_name">Last Name</label><br>
+        <input type="text" id="last_name" name="last_name" placeholder="<%= data.last_name %>"><br>
+  
+        <label for="email">Email</label><br>
+        <input type="text" id="email" name="email" placeholder="<%= data.email %>"><br>
+  
+        <br>
+        <label for="gender-container">Gender</label><br>
+        <div id="gender-container">
+          <input type="radio" id="male" name="gender" value="Male" <%= data.gender === "Male"? "checked" : ""%>>
+          <label for="male">Male</label>
+          
+          <input type="radio" id="female" name="gender" value="Female" <%= data.gender === "Female"? "checked" : ""%>>
+          <label for="female">Female</label>
+        </div>
+        <br>
+          
+        <label for="phone_number">Phone Number</label><br>
+        <input type="text" id="phone_number" name="phone_number" placeholder="<%= data.phone_number %>"><br>
+  
+        <label for="address">Address</label><br>
+        <input type="text" id="address" name="address" placeholder="<%= data.address %>"><br>
+  
+        <br>
+        <input type="submit" id="submit" value="Edit">
+    
+    </form>
+
+    <%- include('./partials/foot') %>

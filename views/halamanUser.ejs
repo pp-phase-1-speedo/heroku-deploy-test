@@ -1,0 +1,31 @@
+<%- include('./partials/head', {title: 'Add Destination' }) %>
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(element => { %>
+                <tr>
+                    <td><%= element.first_name %></td>
+                    <td><%= element.username%></td>
+                    <td><%= element.email%></td>
+                    <td><%= element.gender%></td>
+                    <td><%= element.phone_number%></td>
+                    <td><%= element.address%></td>
+                    <td><a href="/users/edit/<%= element.id%>">Edit</a></td>
+                    <td><a href="/shipments/<%= element.id %>/list">add Shipment</a></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <%- include('./partials/foot') %>
