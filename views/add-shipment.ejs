@@ -1,0 +1,16 @@
+<%- include('./partials/head', {title: 'Add Shipment' }) %>
+
+<form action="/shipments/<%= user_id %>/add" method="POST">
+
+  <label for="location">Select Current Location</label><br>
+  <select id="location" name="location">
+    <option value="-6.176583196881574, 106.8306848835742">Cabang Gambir, Jakarta Pusat</option>
+    <option value="-6.916925840351547, 107.60891786183454">Cabang Bandung, </option>
+  </select><br>
+
+  <br>
+  <input type="submit" value="add new shipment">
+
+</form>
+
+<%- include('./partials/foot') %>
